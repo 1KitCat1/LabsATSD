@@ -5,14 +5,18 @@
         private T data;
         public T Data
         {
-            get{return data}
+            get { return data;}
             set
             {
                 if (value != null) data = value;
             }
         }
-
         public Node<T> Next { get; set; }
+        //constructor
+        public Node(T data)
+        {
+            Data = data;
+        }
         
     }
 }
