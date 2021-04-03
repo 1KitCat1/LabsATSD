@@ -1,14 +1,17 @@
-﻿namespace SortedLinkedList
+﻿using System;
+
+namespace SortedLinkedList
 {
     public class Node<T>
     {
-        private T data;
+        private T _data;
         public T Data
         {
-            get { return data;}
+            get { return _data;}
             set
             {
-                if (value != null) data = value;
+                if (value != null) _data = value;
+                else throw new ArgumentNullException(nameof(value));
             }
         }
         public Node<T> Next { get; set; }
