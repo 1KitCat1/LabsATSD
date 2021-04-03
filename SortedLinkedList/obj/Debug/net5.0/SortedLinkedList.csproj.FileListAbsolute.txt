@@ -1,0 +1,5 @@
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\obj\Debug\net5.0\SortedLinkedList.csprojAssemblyReference.cache
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\obj\Debug\net5.0\SortedLinkedList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\obj\Debug\net5.0\SortedLinkedList.AssemblyInfoInputs.cache
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\obj\Debug\net5.0\SortedLinkedList.AssemblyInfo.cs
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\obj\Debug\net5.0\SortedLinkedList.csproj.CoreCompileInputs.cache
