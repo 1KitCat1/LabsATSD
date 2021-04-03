@@ -5,6 +5,7 @@
     <e p="C:\Users\DenCHik\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_SortedLinkedList.-241263898.00" t="ExcludeRecursive" />
     <e p="C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList" t="IncludeRecursive">
       <e p="bin" t="ExcludeRecursive" />
+      <e p="LinkedList.cs" t="Include" />
       <e p="Node.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
