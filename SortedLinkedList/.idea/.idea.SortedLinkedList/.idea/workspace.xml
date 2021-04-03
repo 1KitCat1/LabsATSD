@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd62a094-bf23-4ea0-9cb8-a8bccceff670" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SortedLinkedList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SortedLinkedList/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Node.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +15,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Node.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1qcXkdBNnOeuAOwuQDIgIrlhBI1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -56,13 +62,14 @@
       <option name="presentableId" value="Default" />
       <updated>1617380001281</updated>
       <workItem from="1617380011524" duration="1992000" />
+      <workItem from="1617436327490" duration="610000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -74,6 +81,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
