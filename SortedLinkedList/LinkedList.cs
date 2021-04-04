@@ -143,7 +143,9 @@ namespace SortedLinkedList
                 }
             }
         }
-
+        /// <summary>
+        /// Deletes all duplicates
+        /// </summary>
         public void DeleteDuplicated()
         {
             var currentNode = Head.Next;
@@ -154,6 +156,28 @@ namespace SortedLinkedList
                 last = currentNode.Data;
                 currentNode = currentNode.Next;
             }
+        }
+        /// <summary>
+        /// Reverse the Linked List
+        /// </summary>
+        public void Reverse()
+        {
+            if (Count >= 2)
+            {
+                var previous = Head;
+                var current = Head.Next;
+                previous.Next = null;
+                Tail = Head;
+                Tail.Next = null;
+                while (current != null)
+                {
+                    var next = current.Next;
+                    current.Next = previous;
+                    previous = current;
+                    current = next;
+                }
+                Head = previous;
+            } 
         }
         public IEnumerator GetEnumerator()
         {
