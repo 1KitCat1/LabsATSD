@@ -3,3 +3,14 @@ C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\
 C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\obj\Debug\net5.0\SortedLinkedList.AssemblyInfoInputs.cache
 C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\obj\Debug\net5.0\SortedLinkedList.AssemblyInfo.cs
 C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\obj\Debug\net5.0\SortedLinkedList.csproj.CoreCompileInputs.cache
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\bin\Debug\net5.0\SortedLinkedList.exe
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\bin\Debug\net5.0\SortedLinkedList.deps.json
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\bin\Debug\net5.0\SortedLinkedList.runtimeconfig.json
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\bin\Debug\net5.0\SortedLinkedList.runtimeconfig.dev.json
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\bin\Debug\net5.0\SortedLinkedList.dll
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\bin\Debug\net5.0\ref\SortedLinkedList.dll
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\bin\Debug\net5.0\SortedLinkedList.pdb
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\obj\Debug\net5.0\SortedLinkedList.dll
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\obj\Debug\net5.0\ref\SortedLinkedList.dll
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\obj\Debug\net5.0\SortedLinkedList.pdb
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\obj\Debug\net5.0\SortedLinkedList.genruntimeconfig.cache
