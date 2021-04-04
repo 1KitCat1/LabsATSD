@@ -6,10 +6,10 @@ namespace SortedLinkedList
     {
         static void Main(string[] args)
         {
-            var List = new LinkedList<int>(5);
-            for (int i = 0; i < 8; i++)
+            var List = new LinkedList<int>(10);
+            for (int i = 8; i > 0; i--)
             {
-                List.Add(i);
+                List.InsertSorted(i);
             }
             List.Print();
             List.Delete(3);

@@ -111,9 +111,33 @@ namespace SortedLinkedList
             Console.WriteLine();
         }
 
-        public void InsertAfter()
+        public void InsertSorted(T data)
         {
-            
+            if (Head == null)
+            {
+                this.Add(data);
+            }
+            else
+            {
+                var node = new Node<T>(data);
+                if (!Head.CompareNodes(node))
+                {
+                    this.AppendHead(data);
+                    return;
+                }
+                var previous = Head;
+                var current = Head.Next;
+                while (current != null)
+                {
+                    if (node.CompareNodes(current))
+                    {
+                        previous.Next = node;
+                        node.Next = current;
+                    }
+                    previous = current;
+                    current = current.Next;
+                }
+            }
         }
         public IEnumerator GetEnumerator()
         {
