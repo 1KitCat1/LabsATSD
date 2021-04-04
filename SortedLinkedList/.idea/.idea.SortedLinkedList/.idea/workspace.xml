@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd62a094-bf23-4ea0-9cb8-a8bccceff670" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SortedLinkedList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SortedLinkedList/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LinkedList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LinkedList.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +67,7 @@
       <updated>1617380001281</updated>
       <workItem from="1617380011524" duration="1992000" />
       <workItem from="1617436327490" duration="4138000" />
-      <workItem from="1617525321360" duration="4605000" />
+      <workItem from="1617525321360" duration="5383000" />
     </task>
     <servers />
   </component>
@@ -104,7 +105,7 @@
               <option value="164" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

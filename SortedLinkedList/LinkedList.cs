@@ -1,6 +1,8 @@
-﻿namespace SortedLinkedList
+﻿using System.Collections;
+
+namespace SortedLinkedList
 {
-    public class LinkedList<T>
+    public class LinkedList<T> : IEnumerable
     {
         public Node<T> Head { get; private set; }
         public Node<T> Tail { get; private set; }
@@ -71,6 +73,16 @@
             }
             
             return false;
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            var currentNode = Head;
+            while (currentNode != null)
+            {
+                yield return currentNode.Data;
+                currentNode = currentNode.Next;
+            }
         }
     }
 }
