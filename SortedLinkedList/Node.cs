@@ -2,6 +2,9 @@
 
 namespace SortedLinkedList
 {
+    /// <summary>
+    /// Element of Linked List
+    /// </summary>
     public class Node<T>
     {
         private T _data;
@@ -24,5 +27,6 @@ namespace SortedLinkedList
         {
             return Data.ToString();
         }
+        
     }
 }

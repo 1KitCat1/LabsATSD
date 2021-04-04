@@ -7,6 +7,7 @@
     <list default="true" id="cd62a094-bf23-4ea0-9cb8-a8bccceff670" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SortedLinkedList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SortedLinkedList/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LinkedList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LinkedList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Node.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +19,9 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Node.cs" />
       <option value="$PROJECT_DIR$/Program.cs" />
       <option value="$PROJECT_DIR$/LinkedList.cs" />
+      <option value="$PROJECT_DIR$/Node.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qcXkdBNnOeuAOwuQDIgIrlhBI1" />
@@ -67,7 +68,7 @@
       <updated>1617380001281</updated>
       <workItem from="1617380011524" duration="1992000" />
       <workItem from="1617436327490" duration="4138000" />
-      <workItem from="1617525321360" duration="5383000" />
+      <workItem from="1617525321360" duration="7794000" />
     </task>
     <servers />
   </component>
