@@ -48,7 +48,10 @@ namespace SortedLinkedList
                 Count = 1;
             }
         }
-
+        /// <summary>
+        /// Insert element into the first position
+        /// </summary>
+        /// <param name="data"></param>
         public void AppendHead(T data)
         {
             var node = new Node<T>(data);
@@ -57,7 +60,11 @@ namespace SortedLinkedList
             Count++;
         }
         
-
+        /// <summary>
+        /// Delete first equal element from the Linked List
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>true if element has been deleted, false otherwise</returns>
         public bool Delete(T data)
         {
             if (Head != null)
@@ -92,7 +99,9 @@ namespace SortedLinkedList
             
             return false;
         }
-
+        /// <summary>
+        /// Print the elements of Linked List
+        /// </summary>
         public void Print()
         {
             foreach (var item in this)
@@ -102,6 +111,10 @@ namespace SortedLinkedList
             Console.WriteLine();
         }
 
+        public void InsertAfter()
+        {
+            
+        }
         public IEnumerator GetEnumerator()
         {
             var currentNode = Head;

@@ -7,15 +7,15 @@ namespace SortedLinkedList
         static void Main(string[] args)
         {
             var List = new LinkedList<int>(5);
-            List.Add(1);
-            List.Add(2);
-            List.Add(3);
+            for (int i = 0; i < 8; i++)
+            {
+                List.Add(i);
+            }
             List.Print();
             List.Delete(3);
-            foreach (var item in List)
-            {
-                Console.Write(item + " ");
-            }
+            List.AppendHead(0);
+            List.Print();
+            
             Console.Read();
         }
     }
