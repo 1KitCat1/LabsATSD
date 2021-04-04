@@ -57,6 +57,11 @@
                     {
                         previous.Next = current.Next;
                         Count--;
+                        if (current == Tail)
+                        {
+                            previous.Next = null;
+                            Tail = previous;
+                        }
                         return true;
                     }
 

@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd62a094-bf23-4ea0-9cb8-a8bccceff670" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SortedLinkedList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SortedLinkedList/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LinkedList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LinkedList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SortedLinkedList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SortedLinkedList.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SortedLinkedList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SortedLinkedList.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SortedLinkedList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SortedLinkedList.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SortedLinkedList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SortedLinkedList.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +18,8 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Node.cs" />
-      <option value="$PROJECT_DIR$/LinkedList.cs" />
       <option value="$PROJECT_DIR$/Program.cs" />
+      <option value="$PROJECT_DIR$/LinkedList.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qcXkdBNnOeuAOwuQDIgIrlhBI1" />
@@ -72,7 +66,7 @@
       <updated>1617380001281</updated>
       <workItem from="1617380011524" duration="1992000" />
       <workItem from="1617436327490" duration="4138000" />
-      <workItem from="1617525321360" duration="3949000" />
+      <workItem from="1617525321360" duration="4605000" />
     </task>
     <servers />
   </component>
@@ -114,5 +108,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#SortedLinkedList.LinkedList`1" memberName="Head" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
