@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Transactions;
 using System.Xml.XPath;
 
 namespace SortedLinkedList
@@ -110,7 +111,10 @@ namespace SortedLinkedList
             }
             Console.WriteLine();
         }
-
+        /// <summary>
+        /// Insert element into the Linked List so that it stays sorted
+        /// </summary>
+        /// <param name="data"></param>
         public void InsertSorted(T data)
         {
             if (Head == null)
@@ -137,6 +141,18 @@ namespace SortedLinkedList
                     previous = current;
                     current = current.Next;
                 }
+            }
+        }
+
+        public void DeleteDuplicated()
+        {
+            var currentNode = Head.Next;
+            T last = Head.Data;
+            while (currentNode != null)
+            {
+                if (currentNode.Data.Equals(last)) Delete(last);
+                last = currentNode.Data;
+                currentNode = currentNode.Next;
             }
         }
         public IEnumerator GetEnumerator()

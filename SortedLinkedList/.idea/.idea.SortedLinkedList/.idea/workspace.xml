@@ -77,7 +77,7 @@
       <updated>1617380001281</updated>
       <workItem from="1617380011524" duration="1992000" />
       <workItem from="1617436327490" duration="4138000" />
-      <workItem from="1617525321360" duration="12675000" />
+      <workItem from="1617525321360" duration="13746000" />
     </task>
     <servers />
   </component>
@@ -102,23 +102,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Program.cs</url>
-          <line>8</line>
-          <properties documentPath="C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\Program.cs" initialLine="8" containingFunctionPresentation="method 'Main'">
-            <startOffsets>
-              <option value="130" />
-            </startOffsets>
-            <endOffsets>
-              <option value="165" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#SortedLinkedList.LinkedList`1" memberName="Head" />

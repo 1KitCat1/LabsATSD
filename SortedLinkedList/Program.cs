@@ -13,9 +13,10 @@ namespace SortedLinkedList
             }
             List.Print();
             List.Delete(3);
-            List.AppendHead(0);
+            List.AppendHead(1);
             List.Print();
-            
+            List.DeleteDuplicated();
+            List.Print();
             Console.Read();
         }
     }
