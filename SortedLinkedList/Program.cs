@@ -10,11 +10,7 @@ namespace SortedLinkedList
             List.Add(1);
             List.Add(2);
             List.Add(3);
-            foreach (var item in List)
-            {
-                Console.Write(item + " ");
-            }
-            Console.WriteLine();
+            List.Print();
             List.Delete(3);
             foreach (var item in List)
             {

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Xml.XPath;
 
 namespace SortedLinkedList
@@ -90,6 +91,15 @@ namespace SortedLinkedList
             }
             
             return false;
+        }
+
+        public void Print()
+        {
+            foreach (var item in this)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine();
         }
 
         public IEnumerator GetEnumerator()
