@@ -12,5 +12,13 @@
             Tail = null;
             Count = 0;
         }
+
+        public LinkedList(T data)
+        {
+            var node = new Node<T>(data);
+            Head = node;
+            Tail = node;
+            Count = 1;
+        }
     }
 }
