@@ -36,7 +36,36 @@
                 Tail = node;
                 Count = 1;
             }
+        }
+
+        public bool Delete(T data)
+        {
+            if (Head != null)
+            {
+                if (Head.Data.Equals(data))
+                {
+                    Head = Head.Next;
+                    Count--;
+                    return true;
+                }
+
+                var current = Head.Next;
+                var previous = Head;
+                while (current != null)
+                {
+                    if (current.Data.Equals(data))
+                    {
+                        previous.Next = current.Next;
+                        Count--;
+                        return true;
+                    }
+
+                    previous = current;
+                    current = current.Next;
+                }
+            }
             
+            return false;
         }
     }
 }

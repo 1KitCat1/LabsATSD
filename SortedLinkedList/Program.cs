@@ -6,7 +6,12 @@ namespace SortedLinkedList
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var List = new LinkedList<int>(5);
+            List.Add(1);
+            List.Add(2);
+            List.Add(3);
+            List.Delete(3);
+            Console.Read();
         }
     }
 }
