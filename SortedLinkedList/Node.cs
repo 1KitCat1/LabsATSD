@@ -7,16 +7,8 @@ namespace SortedLinkedList
     /// </summary>
     public class Node<T> 
     {
-        private T _data;
-        public T Data
-        {
-            get { return _data;}
-            set
-            {
-                if (value != null) _data = value;
-                else throw new ArgumentNullException(nameof(value));
-            }
-        }
+        public T Data { get; set; }
+        
         public Node<T> Next { get; set; }
         //constructor
         public Node(T data)
@@ -34,7 +26,7 @@ namespace SortedLinkedList
         /// <returns>True if this is less then other</returns>
         public bool CompareNodes(Node<T> other)
         {
-            if (Convert.ToInt32(this._data) < Convert.ToInt32(other._data)) return true;
+            if (Convert.ToInt32(this.Data) < Convert.ToInt32(other.Data)) return true;
             return false;
         }
     }

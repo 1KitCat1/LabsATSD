@@ -137,6 +137,7 @@ namespace SortedLinkedList
                     {
                         previous.Next = node;
                         node.Next = current;
+                        return;
                     }
                     previous = current;
                     current = current.Next;
@@ -169,6 +170,7 @@ namespace SortedLinkedList
                 previous.Next = null;
                 Tail = Head;
                 Tail.Next = null;
+                
                 while (current != null)
                 {
                     var next = current.Next;

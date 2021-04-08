@@ -6,19 +6,21 @@ namespace SortedLinkedList
     {
         static void Main(string[] args)
         {
-            var List = new LinkedList<int>(10);
+            var list = new LinkedList<int>(10);
             for (int i = 8; i > 0; i--)
             {
-                List.InsertSorted(i);
+                list.InsertSorted(i);
             }
-            List.Print();
-            List.Delete(3);
-            List.AppendHead(1);
-            List.Print();
+            list.Print();
+            list.Delete(3);
+            list.Print();
+            list.InsertSorted(3);
+            list.Print();
+            list.AppendHead(1);
             //List.DeleteDuplicated();
-            List.Print();
-            List.Reverse();
-            List.Print();
+            list.Print();
+            //list.Reverse();
+            list.Print();
             Console.Read();
         }
     }
