@@ -129,6 +129,7 @@ namespace SortedLinkedList
                     this.AppendHead(data);
                     return;
                 }
+                
                 var previous = Head;
                 var current = Head.Next;
                 while (current != null)
@@ -142,6 +143,8 @@ namespace SortedLinkedList
                     previous = current;
                     current = current.Next;
                 }
+
+                this.Add(node.Data);
             }
         }
         /// <summary>
@@ -180,6 +183,19 @@ namespace SortedLinkedList
                 }
                 Head = previous;
             } 
+        }
+
+        public int FindPosition(T data)
+        {
+            int counter = 0;
+            var currentNode = Head;
+            while (currentNode != null)
+            {
+                if (currentNode.Data.Equals(data)) return counter;
+                currentNode = currentNode.Next;
+            }
+
+            return -1;
         }
         public IEnumerator GetEnumerator()
         {
