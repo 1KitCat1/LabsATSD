@@ -7,7 +7,6 @@
     <list default="true" id="cd62a094-bf23-4ea0-9cb8-a8bccceff670" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SortedLinkedList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SortedLinkedList/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LinkedList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LinkedList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Node.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SortedLinkedList.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SortedLinkedList.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SortedLinkedList.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SortedLinkedList.pdb" afterDir="false" />
@@ -38,8 +37,8 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Node.cs" />
-      <option value="$PROJECT_DIR$/Program.cs" />
       <option value="$PROJECT_DIR$/LinkedList.cs" />
+      <option value="$PROJECT_DIR$/Program.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qcXkdBNnOeuAOwuQDIgIrlhBI1" />
@@ -92,7 +91,7 @@
       <workItem from="1617872797672" duration="84000" />
       <workItem from="1617885540335" duration="2661000" />
       <workItem from="1617917569464" duration="312000" />
-      <workItem from="1617942285614" duration="2556000" />
+      <workItem from="1617942285614" duration="7961000" />
     </task>
     <servers />
   </component>
@@ -117,36 +116,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Program.cs</url>
-          <line>16</line>
-          <properties documentPath="C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\Program.cs" initialLine="16" containingFunctionPresentation="method 'Main'">
-            <startOffsets>
-              <option value="363" />
-            </startOffsets>
-            <endOffsets>
-              <option value="384" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Program.cs</url>
-          <line>11</line>
-          <properties documentPath="C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\SortedLinkedList\Program.cs" initialLine="11" containingFunctionPresentation="method 'Main'">
-            <startOffsets>
-              <option value="235" />
-            </startOffsets>
-            <endOffsets>
-              <option value="256" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#SortedLinkedList.LinkedList`1" memberName="Head" />

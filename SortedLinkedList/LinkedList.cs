@@ -10,6 +10,9 @@ namespace SortedLinkedList
         public Node<T> Head { get; private set; }
         public Node<T> Tail { get; private set; }
         public int Count { get; private set; }
+
+        private string alphabet = "abcdefghijklmnopqrstuvwxyz";
+        
         /// <summary>
         /// Default constructor of Linked List
         /// </summary>
@@ -206,5 +209,24 @@ namespace SortedLinkedList
                 currentNode = currentNode.Next;
             }
         }
+        
+        public int LengthOfLongestSubsequence()
+        {
+            if (Head == null) return 0;
+            int answ = 1;
+            int lastIndex = alphabet.IndexOf(Head.Data.ToString()[0]);
+            var currentNode = Head.Next;
+            while (currentNode != null)
+            {
+                int currentIndex = alphabet.IndexOf(currentNode.Data.ToString()[0]);
+                if (currentIndex - lastIndex != 1) return answ;
+                answ++;
+                currentNode = currentNode.Next;
+                lastIndex = currentIndex;
+
+            }
+            return answ;
+        }
     }
 }
+//принимает 3 сорт лл. Самую длинную подпоследовательность
