@@ -1,0 +1,16 @@
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\2BinaryTree\BinaryTreeLB2\BinaryTreeLB2\bin\Debug\net5.0\BinaryTreeLB2.exe
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\2BinaryTree\BinaryTreeLB2\BinaryTreeLB2\bin\Debug\net5.0\BinaryTreeLB2.deps.json
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\2BinaryTree\BinaryTreeLB2\BinaryTreeLB2\bin\Debug\net5.0\BinaryTreeLB2.runtimeconfig.json
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\2BinaryTree\BinaryTreeLB2\BinaryTreeLB2\bin\Debug\net5.0\BinaryTreeLB2.runtimeconfig.dev.json
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\2BinaryTree\BinaryTreeLB2\BinaryTreeLB2\bin\Debug\net5.0\BinaryTreeLB2.dll
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\2BinaryTree\BinaryTreeLB2\BinaryTreeLB2\bin\Debug\net5.0\ref\BinaryTreeLB2.dll
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\2BinaryTree\BinaryTreeLB2\BinaryTreeLB2\bin\Debug\net5.0\BinaryTreeLB2.pdb
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\2BinaryTree\BinaryTreeLB2\BinaryTreeLB2\obj\Debug\net5.0\BinaryTreeLB2.csprojAssemblyReference.cache
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\2BinaryTree\BinaryTreeLB2\BinaryTreeLB2\obj\Debug\net5.0\BinaryTreeLB2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\2BinaryTree\BinaryTreeLB2\BinaryTreeLB2\obj\Debug\net5.0\BinaryTreeLB2.AssemblyInfoInputs.cache
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\2BinaryTree\BinaryTreeLB2\BinaryTreeLB2\obj\Debug\net5.0\BinaryTreeLB2.AssemblyInfo.cs
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\2BinaryTree\BinaryTreeLB2\BinaryTreeLB2\obj\Debug\net5.0\BinaryTreeLB2.csproj.CoreCompileInputs.cache
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\2BinaryTree\BinaryTreeLB2\BinaryTreeLB2\obj\Debug\net5.0\BinaryTreeLB2.dll
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\2BinaryTree\BinaryTreeLB2\BinaryTreeLB2\obj\Debug\net5.0\ref\BinaryTreeLB2.dll
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\2BinaryTree\BinaryTreeLB2\BinaryTreeLB2\obj\Debug\net5.0\BinaryTreeLB2.pdb
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\2BinaryTree\BinaryTreeLB2\BinaryTreeLB2\obj\Debug\net5.0\BinaryTreeLB2.genruntimeconfig.cache
