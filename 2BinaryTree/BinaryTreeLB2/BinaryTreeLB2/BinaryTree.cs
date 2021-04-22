@@ -22,6 +22,10 @@ namespace BinaryTreeLB2
             Root.Add(data);
         }
 
+        public bool IsEmpty()
+        {
+            return Root == null;
+        }
 
     }
 }
