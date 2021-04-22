@@ -21,6 +21,31 @@ namespace BinaryTreeLB2
             Right = right;
         }
 
+        public void Add(T data)
+        {
+            var node = new Node<T>(data);
+            if (data.CompareTo(Data) < 0)
+            {
+                if (Left == null)
+                {
+                    Left = node;
+                    return;
+                }
+
+                Left.Add(data);
+                
+            }
+            else
+            {
+                if (Right == null)
+                {
+                    Right = node;
+                    return;
+                }
+
+                Right.Add(data);
+            }
+        }
         public int CompareTo(object? obj)
         {
             if (obj is Node<T> other)
@@ -32,6 +57,11 @@ namespace BinaryTreeLB2
                 Console.WriteLine("Cannot compare properly");
                 return -1;
             }
+        }
+
+        public override string ToString()
+        {
+            return Data.ToString();
         }
     }
 }
