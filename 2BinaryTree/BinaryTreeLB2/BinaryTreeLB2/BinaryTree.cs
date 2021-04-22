@@ -53,6 +53,15 @@ namespace BinaryTreeLB2
 
             return list;
         }
+
+        public void PrintPreorder()
+        {
+            foreach (var item in this.Preorder())
+            {
+                Console.Write(item.ToString() + " ");
+            }
+            Console.WriteLine();
+        }
         //
         
         //POSTORDER
@@ -82,6 +91,14 @@ namespace BinaryTreeLB2
 
             return list;
         }
+        public void PrintPostorder()
+        {
+            foreach (var item in this.Postorder())
+            {
+                Console.Write(item.ToString() + " ");
+            }
+            Console.WriteLine();
+        }
         //
         
         //INORDER
@@ -110,6 +127,14 @@ namespace BinaryTreeLB2
             }
 
             return list;
+        }
+        public void PrintInorder()
+        {
+            foreach (var item in this.Inorder())
+            {
+                Console.Write(item.ToString() + " ");
+            }
+            Console.WriteLine();
         }
         //
     }

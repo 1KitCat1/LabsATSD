@@ -16,20 +16,10 @@ namespace BinaryTreeLB2
             tree.Add(6);
             tree.Add(9);
 
-            foreach (var item in tree.Preorder())
-            {
-                Console.Write(item.ToString() + " ");
-            }
-            Console.WriteLine();
-            foreach (var item in tree.Postorder())
-            {
-                Console.Write(item.ToString() + " ");
-            }
-            Console.WriteLine();
-            foreach (var item in tree.Inorder())
-            {
-                Console.Write(item.ToString() + " ");
-            }
+            tree.PrintInorder();
+            tree.PrintPostorder();
+            tree.PrintPreorder();
+
         }
     }
 }
