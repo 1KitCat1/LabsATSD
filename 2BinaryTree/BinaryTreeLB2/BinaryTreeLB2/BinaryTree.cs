@@ -19,9 +19,14 @@ namespace BinaryTreeLB2
                 return;
             }
 
+            Count += 1;
             Root.Add(data);
         }
 
+        public int Size()
+        {
+            return Count;
+        }
         public bool IsEmpty()
         {
             return Root == null;
