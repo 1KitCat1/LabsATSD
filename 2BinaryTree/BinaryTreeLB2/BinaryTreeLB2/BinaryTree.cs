@@ -55,6 +55,34 @@ namespace BinaryTreeLB2
         }
         //
         
-        
+        //POSTORDER
+        public List<T> Postorder()
+        {
+            var list = new List<T>();
+            if (Root == null) return new List<T>();
+            return Postorder(Root);
+        }
+
+        private List<T> Postorder(Node<T> node)
+        {
+            var list = new List<T>();
+            if (node != null)
+            {
+                if (node.Left != null)
+                {
+                    list.AddRange(Postorder(node.Left));
+                }
+
+                if (node.Right != null)
+                {
+                    list.AddRange(Postorder(node.Right));
+                }
+                list.Add(node.Data);
+            }
+
+            return list;
+        }
+        //
+
     }
 }
