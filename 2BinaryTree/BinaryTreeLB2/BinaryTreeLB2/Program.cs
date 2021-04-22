@@ -19,7 +19,7 @@ namespace BinaryTreeLB2
             tree.PrintInorder();
             tree.PrintPostorder();
             tree.PrintPreorder();
-
+            Console.WriteLine(tree.Size());
         }
     }
 }

@@ -61,6 +61,7 @@ namespace BinaryTreeLB2
 
         public void PrintPreorder()
         {
+            Console.WriteLine("Preorder: ");
             foreach (var item in this.Preorder())
             {
                 Console.Write(item.ToString() + " ");
@@ -98,6 +99,7 @@ namespace BinaryTreeLB2
         }
         public void PrintPostorder()
         {
+            Console.WriteLine("Postorder: ");
             foreach (var item in this.Postorder())
             {
                 Console.Write(item.ToString() + " ");
@@ -135,6 +137,7 @@ namespace BinaryTreeLB2
         }
         public void PrintInorder()
         {
+            Console.WriteLine("Inorder: ");
             foreach (var item in this.Inorder())
             {
                 Console.Write(item.ToString() + " ");
@@ -142,5 +145,13 @@ namespace BinaryTreeLB2
             Console.WriteLine();
         }
         //
+        
+        private Node<T> RotateRR(Node<T> parent)
+        {
+            Node<T> current = parent.Right;
+            parent.Right = current.Left;
+            current.Left = parent;
+            return current;
+        }
     }
 }
