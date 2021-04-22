@@ -162,14 +162,14 @@ namespace BinaryTreeLB2
             return current;
         }
 
-        private Node<T> RotateRL(Node<T> parent)
+        private Node<T> RotateRl(Node<T> parent)
         {
             Node<T> current = parent.Right;
             parent.Right = RotateL(current);
             return RotateR(parent);
         }
         
-        private Node<T> RotateLR(Node<T> parent)
+        private Node<T> RotateLr(Node<T> parent)
         {
             Node<T> current = parent.Left;
             parent.Left = RotateR(current);
@@ -194,6 +194,74 @@ namespace BinaryTreeLB2
             int r = GetHeight(current.Right);
             int balanceFactor = l - r;
             return balanceFactor;
+        }
+        //DeleteNode
+        public void Remove(T data)
+        {
+            Root = Remove(Root, data);
+        }
+        private Node<T> Remove(Node<T> current, T data)
+        {
+            if (current == null)
+            {
+                return null;
+            }
+            if (data.CompareTo(current.Data) < 0)
+            {
+                current.Left = Remove(current.Left, data);
+                if (BalanceFactor(current) == -2)
+                {
+                    if (BalanceFactor(current.Right) <= 0)
+                    {
+                        current = RotateR(current);
+                    }
+                    else
+                    {
+                        current = RotateRl(current);
+                    }
+                }
+            }
+            else if (data.CompareTo(current.Data) > 0)
+            {
+                current.Right = Remove(current.Right, data);
+                if (BalanceFactor(current) == 2)
+                {
+                    if (BalanceFactor(current.Left) >= 0)
+                    {
+                        current = RotateL(current);
+                    }
+                    else
+                    {
+                        current = RotateLr(current);
+                    }
+                }
+            }
+            else
+            {
+                if (current.Right != null)
+                {
+                    Node<T> parent = current.Right;
+                    while (parent.Left != null)
+                    {
+                        parent = parent.Left;
+                    }
+                    current.Data = parent.Data;
+                    current.Right = Remove(current.Right, parent.Data);
+                    if (BalanceFactor(current) == 2)
+                    {
+                        if (BalanceFactor(current.Left) >= 0)
+                        {
+                            current = RotateL(current);
+                        }
+                        else { current = RotateLr(current); }
+                    }
+                }
+                else
+                {   
+                    return current.Left;
+                }
+            }
+            return current;
         }
     }
 }
