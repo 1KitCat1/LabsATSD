@@ -146,6 +146,7 @@ namespace BinaryTreeLB2
         }
         //
         
+        //Node rotations
         private Node<T> RotateR(Node<T> parent)
         {
             Node<T> current = parent.Right;
@@ -173,6 +174,19 @@ namespace BinaryTreeLB2
             Node<T> current = parent.Left;
             parent.Left = RotateR(current);
             return RotateL(parent);
+        }
+        //Node rotation ends
+        
+        private int GetHeight(Node<T> current)
+        {
+            int height = 0;
+            if (current != null)
+            {
+                int l = GetHeight(current.Left);
+                int r = GetHeight(current.Right);
+                height = Math.Max(l,r) + 1;
+            }
+            return height;
         }
     }
 }
