@@ -146,11 +146,18 @@ namespace BinaryTreeLB2
         }
         //
         
-        private Node<T> RotateRR(Node<T> parent)
+        private Node<T> RotateR(Node<T> parent)
         {
             Node<T> current = parent.Right;
             parent.Right = current.Left;
             current.Left = parent;
+            return current;
+        }
+        private Node<T> RotateL(Node<T> parent)
+        {
+            Node<T> current = parent.Left;
+            parent.Left = current.Right;
+            current.Right = parent;
             return current;
         }
     }
