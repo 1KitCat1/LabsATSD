@@ -25,6 +25,11 @@ namespace BinaryTreeLB2
             {
                 Console.Write(item.ToString() + " ");
             }
+            Console.WriteLine();
+            foreach (var item in tree.Inorder())
+            {
+                Console.Write(item.ToString() + " ");
+            }
         }
     }
 }

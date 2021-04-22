@@ -83,6 +83,34 @@ namespace BinaryTreeLB2
             return list;
         }
         //
+        
+        //INORDER
+        public List<T> Inorder()
+        {
+            var list = new List<T>();
+            if (Root == null) return new List<T>();
+            return Inorder(Root);
+        }
 
+        private List<T> Inorder(Node<T> node)
+        {
+            var list = new List<T>();
+            if (node != null)
+            {
+                if (node.Left != null)
+                {
+                    list.AddRange(Inorder(node.Left));
+                }
+                list.Add(node.Data);
+                if (node.Right != null)
+                {
+                    list.AddRange(Inorder(node.Right));
+                }
+                
+            }
+
+            return list;
+        }
+        //
     }
 }
