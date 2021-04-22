@@ -26,6 +26,35 @@ namespace BinaryTreeLB2
         {
             return Root == null;
         }
+        //PREORDER
+        public List<T> Preorder()
+        {
+            var list = new List<T>();
+            if (Root == null) return new List<T>();
+            return Preorder(Root);
+        }
 
+        private List<T> Preorder(Node<T> node)
+        {
+            var list = new List<T>();
+            if (node != null)
+            {
+                list.Add(node.Data);
+                if (node.Left != null)
+                {
+                    list.AddRange(Preorder(node.Left));
+                }
+
+                if (node.Right != null)
+                {
+                    list.AddRange(Preorder(node.Right));
+                }
+            }
+
+            return list;
+        }
+        //
+        
+        
     }
 }
