@@ -188,5 +188,12 @@ namespace BinaryTreeLB2
             }
             return height;
         }
+        private int BalanceFactor(Node<T> current)
+        {
+            int l = GetHeight(current.Left);
+            int r = GetHeight(current.Right);
+            int balanceFactor = l - r;
+            return balanceFactor;
+        }
     }
 }
