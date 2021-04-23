@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Runtime.CompilerServices;
 
 namespace BinaryTreeLB2
 {
@@ -60,12 +58,12 @@ namespace BinaryTreeLB2
             if (insertionNode.Data.CompareTo(currentNode.Data) < 0)
             {
                 currentNode.Left = InsertBalanced(currentNode.Left, insertionNode);
-                currentNode = BalanceTree(currentNode);
+                currentNode = Balance(currentNode);
             }
             else if (insertionNode.Data.CompareTo(currentNode.Data) > 0)
             {
                 currentNode.Right = InsertBalanced(currentNode.Right, insertionNode);
-                currentNode = BalanceTree(currentNode);
+                currentNode = Balance(currentNode);
             }
             return currentNode;
         }
@@ -276,6 +274,85 @@ namespace BinaryTreeLB2
             return balanceFactor;
         }
         
+        //Modification of tree balancing
+        private int Height(Node<T> root)
+        {
+            if (root == null)
+            { 
+                return -1; 
+            }
+            if (root.Left == null && root.Right == null)
+            { 
+                return 0;
+            }
+            else if (root.Right == null || Height(root.Left) > Height(root.Right))
+            {
+                return Height(root.Left) + 1;
+            }
+            else
+                return Height(root.Right) + 1;
+        }
+        
+        private Node<T> RightRotation(Node<T> root)
+        {
+            if(root.Left != null)
+            {
+                Node<T> newRoot = root.Left;
+                root.Left = newRoot.Right;
+                newRoot.Right = root;
+                return newRoot;
+            }
+
+            return root.Left;
+        }
+        
+        private Node<T> LeftRotation(Node<T> root)
+        {
+            if (root.Right != null)
+            {
+                Node<T> newRoot = root.Right;
+                root.Right = newRoot.Left;
+                newRoot.Left = root;
+                return newRoot;
+            }
+
+            return root.Right;
+        }
+
+        private Node<T> LeftRightRotation(Node<T> root)
+        {
+            root.Left = LeftRotation(root.Left);
+            root = RightRotation(root);
+            return root;
+        }
+        
+        private Node<T> RightLeftRotation(Node<T> root)
+        {
+            root.Right = RightRotation(root.Right);
+            root = LeftRotation(root);
+            return root;
+        }
+        public Node<T> Balance(Node<T> root)
+        {
+            if (IsBalanced(root)) return root;
+            
+            else  if (Height(root.Right) > Height(root.Left))
+            {
+                if (root.Right.Right != null)
+                    return LeftRotation(root);
+                else
+                    return RightLeftRotation(root);                   
+            }
+            else
+            {
+                if (root.Left.Left != null)                
+                    return RightRotation(root);                   
+                else
+                    return LeftRightRotation(root);                    
+            }
+        }
+        
+        //End of second version of balancing
         private Node<T> BalanceTree(Node<T> current)
         {
             int balanceFactor = BalanceFactor(current);
@@ -647,32 +724,21 @@ namespace BinaryTreeLB2
                 return Search(data, current.Right);
             }
         }
-        public Node<T> CommonAncestor(T a, T b)
+        public T CommonAncestor(T a, T b)
         {
-            if (!Search(b, Root) || !Search(a, Root))
+            var wayList = new List<T>();
+            while (!a.Equals(Root.Data))
             {
-                return null;
+                a = FatherNode(a);
+                wayList.Add(a);
             }
-            else
-            {
-                return new Node<T>(CommonAncestorRec(a, b)); ;
-            }
-        }
 
-        private T CommonAncestorRec(T node1, T node2)
-        {
-            while (node1.CompareTo(node2) != 0)
+            while (!wayList.Contains(b))
             {
-                if (node1.CompareTo(Root.Data) != 0)
-                {
-                    node1 = FatherNode(node1);
-                }
-                if (node2.CompareTo(Root.Data) != 0)
-                {
-                    node2 = FatherNode(node2);
-                }
+                b = FatherNode(b);
             }
-            return node1;
+
+            return b;
         }
 
     }

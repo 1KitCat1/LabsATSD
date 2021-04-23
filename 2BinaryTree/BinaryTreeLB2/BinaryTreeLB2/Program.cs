@@ -81,7 +81,35 @@ namespace BinaryTreeLB2
             Console.WriteLine(tree.FatherNode(3));
             //Task 15
             Console.WriteLine("Returns the lowest common ancestor of the two nodes containing the argument keys");
+            Console.Write("CommonAncestor(1,3): ");
             Console.WriteLine(tree.CommonAncestor(1,3));
+            Console.Write("CommonAncestor(1,9): ");
+            Console.WriteLine(tree.CommonAncestor(1,9));
+            
+            var modTree = new BinaryTree<int>();
+            modTree.InsertBalanced(5);
+            modTree.InsertBalanced(9);
+            modTree.InsertBalanced(1);
+            modTree.InsertBalanced(2);
+            modTree.InsertBalanced(4);
+            modTree.InsertBalanced(8);
+            modTree.InsertBalanced(10);
+            modTree.InsertBalanced(11);
+            modTree.InsertBalanced(12);
+            modTree.InsertBalanced(13);
+
+            modTree.PrintInorder();
+            modTree.PrintPostorder();
+            
+            modTree.Remove(13);
+            modTree.Remove(12);
+            modTree.Remove(11);
+            
+            modTree.PrintInorder();
+            modTree.PrintPostorder();
+
+
+
         }
     }
 }
