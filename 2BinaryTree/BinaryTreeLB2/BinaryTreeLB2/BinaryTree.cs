@@ -391,5 +391,43 @@ namespace BinaryTreeLB2
 
             return tempTree;
         }
+        public int FindMiddle()
+        {
+            var list = Inorder();
+            int minDif = 9999;
+            int minVal = 10000;
+            int maxVal = -10000;
+
+            foreach(var item in list)
+            {
+                if (int.TryParse(item.ToString(), out int val))
+                {
+                    minVal = Math.Min(minVal, val);
+                    maxVal = Math.Max(maxVal, val);
+                }
+                else
+                {
+                    Console.WriteLine("Cannot parse to int");
+                    return -9999;
+                }
+            }
+            foreach(var item in list)
+            {
+                if (int.TryParse(item.ToString(), out int val))
+                {
+                    if (Math.Abs((maxVal + minVal) / 2 - val) < Math.Abs((maxVal + minVal) / 2 - minDif))
+                    {
+                        minDif = val;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Cannot parse to int");
+                    return -9999;
+                }
+            }
+
+            return minDif;
+        }
     }
 }

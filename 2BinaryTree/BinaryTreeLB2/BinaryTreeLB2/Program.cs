@@ -31,9 +31,9 @@ namespace BinaryTreeLB2
             Console.WriteLine("Deletes all even keys: ");
             var tempTree = tree.DeleteEven();
             tempTree.PrintInorder();
-            //Task 5
-            Console.WriteLine("Deletes all even keys: ");
-
+            //Task 5 ONLY FOR INT
+            Console.WriteLine("Returns the tree key which is the nearest to the middle: ");
+            Console.WriteLine(tree.FindMiddle());
             Console.WriteLine(tree.Size());
         }
     }
