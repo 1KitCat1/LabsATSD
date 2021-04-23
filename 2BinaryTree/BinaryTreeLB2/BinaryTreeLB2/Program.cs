@@ -72,6 +72,12 @@ namespace BinaryTreeLB2
             Console.WriteLine(tree.IsEqual(tree.CopyBBST()));
             Console.WriteLine("Comparing tree and another tree: ");
             Console.WriteLine(tree.IsEqual(tree10));
+            //Task 13
+            Console.WriteLine("Creates and returns a new BBST which is symmetrical to the original one");
+            var symmetricalTree = tree.SymmetricalBBST();
+            symmetricalTree.PrintInorder();
+            //Task 14
+            
 
         }
     }

@@ -568,5 +568,24 @@ namespace BinaryTreeLB2
 
             return true;
         }
+
+        public  BinaryTree<T> SymmetricalBBST()
+        {
+            var sTree = new BinaryTree<T>(SymmetricalBBST(Root));
+            return sTree;
+        }
+  
+        private  Node<T> SymmetricalBBST(Node<T> root)
+        {
+            if (root == null)
+            {
+                return null;
+            }
+           
+            Node<T> node = new Node<T>(root.Data);
+            node.Right = SymmetricalBBST(root.Left);
+            node.Left = SymmetricalBBST(root.Right);
+            return node;
+        }
     }
 }
