@@ -34,7 +34,13 @@ namespace BinaryTreeLB2
             //Task 5 ONLY FOR INT
             Console.WriteLine("Returns the tree key which is the nearest to the middle: ");
             Console.WriteLine(tree.FindMiddle());
-            Console.WriteLine(tree.Size());
+            //Task 6 
+            Console.WriteLine("Deletes all duplicate values: ");
+            var noDuplicatesTree = tree.DeleteDuplicates();
+            noDuplicatesTree.PrintInorder();
+            //Task 7
+            Console.WriteLine("Deletes all duplicate values: ");
+
         }
     }
 }

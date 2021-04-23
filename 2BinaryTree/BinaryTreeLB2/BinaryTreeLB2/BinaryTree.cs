@@ -380,7 +380,7 @@ namespace BinaryTreeLB2
             {
                 if (int.TryParse(item.ToString(), out int val))
                 {
-                    tempTree.Add(item);
+                    if(val % 2 != 0)tempTree.Add(item);
                 }
                 else
                 {
@@ -428,6 +428,27 @@ namespace BinaryTreeLB2
             }
 
             return minDif;
+        }
+
+        public BinaryTree<T> DeleteDuplicates()
+        {
+            var list = Preorder();
+            var newList = new List<T>();
+            foreach (var item in list)
+            {
+                if (!newList.Contains(item))
+                {
+                    newList.Add(item);
+                }
+            }
+
+            var newTree = new BinaryTree<T>();
+            foreach (var item in list)
+            {
+                newTree.Add(item);
+            }
+
+            return newTree;
         }
     }
 }
