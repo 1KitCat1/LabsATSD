@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
+using System.Runtime.CompilerServices;
 
 namespace BinaryTreeLB2
 {
@@ -554,12 +556,17 @@ namespace BinaryTreeLB2
             return true;
         }
 
-        // public bool IsEqual(BinaryTree<T> secondTree)
-        // {
-        //     var list1 = Inorder();
-        //     var list2 = secondTree.Inorder();
-        //     if (list1.Count != list2.Count) return false;
-        //     for(int i = 0; i < )
-        // }
+        public bool IsEqual(BinaryTree<T> secondTree)
+        {
+            var list1 = Inorder();
+            var list2 = secondTree.Inorder();
+            if (list1.Count != list2.Count) return false;
+            for (int i = 0; i < list1.Count; i++)
+            {
+                if (!list1[i].Equals(list2[i])) return false;
+            }
+
+            return true;
+        }
     }
 }

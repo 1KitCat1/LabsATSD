@@ -67,7 +67,12 @@ namespace BinaryTreeLB2
             Console.WriteLine("Returns true if the calling object is a balanced binary search tree, otherwise false");
             Console.WriteLine(tree.IsBalanced());
             //Task 12
-            
+            Console.WriteLine("Returns true if two BBSTs are equal ");
+            Console.WriteLine("Comparing tree and its copy: ");
+            Console.WriteLine(tree.IsEqual(tree.CopyBBST()));
+            Console.WriteLine("Comparing tree and another tree: ");
+            Console.WriteLine(tree.IsEqual(tree10));
+
         }
     }
 }
