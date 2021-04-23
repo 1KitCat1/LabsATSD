@@ -450,5 +450,25 @@ namespace BinaryTreeLB2
 
             return newTree;
         }
+
+        public T FindSecondLargest()
+        {
+            var list = Inorder();
+            if (list.Count < 2) return default(T);
+            return list[1];
+        }
+
+        public BinaryTree<T> CopyBBST()
+        {
+            var newTree = new BinaryTree<T>();
+            newTree.Root = new Node<T>(Root.Data);
+            var list = Preorder();
+            foreach (var item in list)
+            {
+                newTree.InsertBalanced(item);
+            }
+
+            return newTree;
+        }
     }
 }

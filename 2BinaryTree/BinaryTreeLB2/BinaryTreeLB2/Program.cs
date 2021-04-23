@@ -39,8 +39,11 @@ namespace BinaryTreeLB2
             var noDuplicatesTree = tree.DeleteDuplicates();
             noDuplicatesTree.PrintInorder();
             //Task 7
-            Console.WriteLine("Deletes all duplicate values: ");
-
+            Console.WriteLine("Returns the second largest key: ");
+            Console.WriteLine(tree.FindSecondLargest());
+            //Task 8
+            Console.WriteLine("Returns the second largest key: ");
+        
         }
     }
 }
