@@ -63,6 +63,10 @@ namespace BinaryTreeLB2
             tree10.Add(6);
             tree10.Add(3);
             Console.WriteLine(tree.ContainsBBST(tree10));
+            //Task 11
+            Console.WriteLine("Returns true if the calling object is a balanced binary search tree, otherwise false");
+            Console.WriteLine(tree.IsBalanced());
+            //Task 12
             
         }
     }

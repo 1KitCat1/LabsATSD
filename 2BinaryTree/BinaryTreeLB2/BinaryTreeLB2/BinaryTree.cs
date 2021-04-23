@@ -248,6 +248,24 @@ namespace BinaryTreeLB2
             }
             return height;
         }
+
+        public bool IsBalanced()
+        {
+            if (Root == null) return true;
+            return IsBalanced(Root);
+        }
+
+        public bool IsBalanced(Node<T> node)
+        {
+            if (node == null) return true;
+            var balance = BalanceFactor(node);
+            if (balance > -2 && balance < 2)
+            {
+                if (IsBalanced(node.Right) && IsBalanced(node.Left)) return true;
+                else return false;
+            }
+            else return false;
+        }
         private int BalanceFactor(Node<T> current)
         {
             int l = GetHeight(current.Left);
@@ -535,5 +553,13 @@ namespace BinaryTreeLB2
 
             return true;
         }
+
+        // public bool IsEqual(BinaryTree<T> secondTree)
+        // {
+        //     var list1 = Inorder();
+        //     var list2 = secondTree.Inorder();
+        //     if (list1.Count != list2.Count) return false;
+        //     for(int i = 0; i < )
+        // }
     }
 }
