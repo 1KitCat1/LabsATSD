@@ -726,6 +726,11 @@ namespace BinaryTreeLB2
         }
         public T CommonAncestor(T a, T b)
         {
+            if (!Search(a, Root) || !Search(b, Root))
+            {
+                Console.WriteLine("Those value are not represented in a tree. Returned default value");
+                return default;
+            }
             var wayList = new List<T>();
             while (!a.Equals(Root.Data))
             {
