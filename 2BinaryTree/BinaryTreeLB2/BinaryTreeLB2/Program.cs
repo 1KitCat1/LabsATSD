@@ -78,9 +78,10 @@ namespace BinaryTreeLB2
             symmetricalTree.PrintInorder();
             //Task 14
             Console.WriteLine("Returns the key of the father node for the node with the argument key");
-            Console.WriteLine(tree.FatherNode(9));
+            Console.WriteLine(tree.FatherNode(3));
             //Task 15
-            
+            Console.WriteLine("Returns the lowest common ancestor of the two nodes containing the argument keys");
+            Console.WriteLine(tree.CommonAncestor(1,3));
         }
     }
 }

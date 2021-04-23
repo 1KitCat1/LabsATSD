@@ -624,5 +624,56 @@ namespace BinaryTreeLB2
             }
             
         }
+        private bool Search(T data, Node<T> current)
+        {
+            if (current.Data.Equals(data))
+            {
+                return true;
+            }
+            if (data.CompareTo(current.Data) < 0)
+            {
+                if (current.Left == null)
+                {
+                    return false;
+                }
+                return Search(data, current.Left);
+            }
+            else
+            {
+                if (current.Right == null)
+                {
+                    return false;
+                }
+                return Search(data, current.Right);
+            }
+        }
+        public Node<T> CommonAncestor(T a, T b)
+        {
+            if (!Search(b, Root) || !Search(a, Root))
+            {
+                return null;
+            }
+            else
+            {
+                return new Node<T>(CommonAncestorRec(a, b)); ;
+            }
+        }
+
+        private T CommonAncestorRec(T node1, T node2)
+        {
+            while (node1.CompareTo(node2) != 0)
+            {
+                if (node1.CompareTo(Root.Data) != 0)
+                {
+                    node1 = FatherNode(node1);
+                }
+                if (node2.CompareTo(Root.Data) != 0)
+                {
+                    node2 = FatherNode(node2);
+                }
+            }
+            return node1;
+        }
+
     }
 }
