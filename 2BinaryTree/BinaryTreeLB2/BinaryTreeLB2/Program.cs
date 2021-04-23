@@ -22,12 +22,18 @@ namespace BinaryTreeLB2
             //Task 1
             tree.PrintSorted();
             //Task 2
-            Console.WriteLine("Count the number of left son nodes");
-            Console.WriteLine(tree.CountNodeLeft());;
+            Console.WriteLine("Count the number of left son nodes: ");
+            Console.WriteLine(tree.CountNodeLeft());
             //Task 3 ONLY FOR INT
-            Console.WriteLine("Finds the sum of keys in right son nodes");
-            Console.WriteLine(tree.SumKeys(tree.Root));
-            //Task 4
+            Console.WriteLine("Finds the sum of keys in right son nodes: ");
+            Console.WriteLine(tree.SumKeysRight());
+            //Task 4 ONLY FOR INT
+            Console.WriteLine("Deletes all even keys: ");
+            var tempTree = tree.DeleteEven();
+            tempTree.PrintInorder();
+            //Task 5
+            Console.WriteLine("Deletes all even keys: ");
+
             Console.WriteLine(tree.Size());
         }
     }

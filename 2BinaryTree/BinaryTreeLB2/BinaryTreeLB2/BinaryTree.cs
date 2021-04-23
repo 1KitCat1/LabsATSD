@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 
 namespace BinaryTreeLB2
@@ -41,8 +42,7 @@ namespace BinaryTreeLB2
         {
             if (currentNode == null)
             {
-                currentNode = insertionNode;
-                return currentNode;
+                return insertionNode;
             }
             if (insertionNode.CompareTo(currentNode) < 0)
             {
@@ -343,7 +343,7 @@ namespace BinaryTreeLB2
         }
         public int CountNodeLeft()
         {
-            return CountNodeLeft(Root);
+            return CountNodeLeft(Root.Left);
         }
         private int CountNodeLeft(Node<T> current)
         {
@@ -351,18 +351,45 @@ namespace BinaryTreeLB2
             {
                 return 0;
             }
-            if (current.Left == null)
-            {
-                return CountNodeLeft(current.Right);
-            }
-            return CountNodeLeft(current.Left) + CountNodeLeft(current.Right) + 1;
+            return 1 + CountNodeLeft(current.Left) + CountNodeLeft(current.Right);
             
         }
 
-        public  int SumKeys(Node<int> root)
+        public int SumKeysRight()
+        {
+            return SumKeys(Root.Right);
+        }
+        private  int SumKeys(Node<T> root)
         {
             if (root == null) return 0;
-            return (root.Data + SumKeys(root.Right) + SumKeys(root.Left) );
+            if (int.TryParse(root.Data.ToString(), out int val))
+            {
+                //Console.Write(val + " - ");
+                return val + SumKeys(root.Right) + SumKeys(root.Left);
+            }
+           
+            Console.WriteLine("Cannot parse node value to int");
+            return -1;
+            
+        }
+        public BinaryTree<T> DeleteEven()
+        {
+            var tempTree = new BinaryTree<T>();
+            var list = Inorder();
+            foreach (var item in list)
+            {
+                if (int.TryParse(item.ToString(), out int val))
+                {
+                    tempTree.Add(item);
+                }
+                else
+                {
+                    Console.WriteLine("Tree is not int. Cannot delete even");
+                    return tempTree;
+                }
+            }
+
+            return tempTree;
         }
     }
 }
