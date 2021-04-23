@@ -77,8 +77,10 @@ namespace BinaryTreeLB2
             var symmetricalTree = tree.SymmetricalBBST();
             symmetricalTree.PrintInorder();
             //Task 14
+            Console.WriteLine("Returns the key of the father node for the node with the argument key");
+            Console.WriteLine(tree.FatherNode(9));
+            //Task 15
             
-
         }
     }
 }

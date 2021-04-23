@@ -587,5 +587,42 @@ namespace BinaryTreeLB2
             node.Left = SymmetricalBBST(root.Right);
             return node;
         }
+
+        public T FatherNode(T data)
+        {
+            if (Root.Data.Equals(data))
+            {
+                Console.WriteLine("Value found in root, returned default value");
+                return default(T);
+            }
+
+            return FatherNode(data, Root);
+        }
+
+        private T FatherNode(T data, Node<T> father)
+        {
+            if (father.Left != null && father.Left.Data.Equals(data)) return father.Data;
+            if (father.Right != null && father.Right.Data.Equals(data)) return father.Data;
+
+            if (father.Data.CompareTo(data) > 0)
+            {
+                if (father.Left == null)
+                {
+                    Console.WriteLine("Root has not been found");
+                    return default(T);
+                }
+                return FatherNode(data, father.Left);
+            }
+            else
+            {
+                if (father.Right == null)
+                {
+                    Console.WriteLine("Root has not been found");
+                    return default(T);
+                }
+                return FatherNode(data, father.Right);
+            }
+            
+        }
     }
 }
