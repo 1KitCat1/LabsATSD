@@ -44,10 +44,12 @@ namespace BinaryTreeLB2
             if (insertionNode.CompareTo(currentNode) < 0)
             {
                 currentNode.Left = InsertBalanced(currentNode.Left, insertionNode);
+                currentNode = BalanceTree(currentNode);
             }
             else if (insertionNode.Data.CompareTo(currentNode.Data) > 0)
             {
                 currentNode.Right = InsertBalanced(currentNode.Right, insertionNode);
+                currentNode = BalanceTree(currentNode);
             }
             return currentNode;
         }
@@ -203,6 +205,7 @@ namespace BinaryTreeLB2
         }
         //Node rotation ends
         
+        //Node balancing
         private int GetHeight(Node<T> current)
         {
             int height = 0;
@@ -221,6 +224,35 @@ namespace BinaryTreeLB2
             int balanceFactor = l - r;
             return balanceFactor;
         }
+        
+        private Node<T> BalanceTree(Node<T> current)
+        {
+            int balanceFactor = BalanceFactor(current);
+            if (balanceFactor > 1)
+            {
+                if (BalanceFactor(current.Left) > 0)
+                {
+                    current = RotateL(current);
+                }
+                else
+                {
+                    current = RotateLr(current);
+                }
+            }
+            else if (balanceFactor < -1)
+            {
+                if (BalanceFactor(current.Right) > 0)
+                {
+                    current = RotateRl(current);
+                }
+                else
+                {
+                    current = RotateR(current);
+                }
+            }
+            return current;
+        }
+        //
         //DeleteNode
         public void Remove(T data)
         {
