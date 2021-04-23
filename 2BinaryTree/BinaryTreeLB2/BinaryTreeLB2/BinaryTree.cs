@@ -516,7 +516,11 @@ namespace BinaryTreeLB2
 
         public void Merge(BinaryTree<T> secondTree)
         {
-            
+            var list = secondTree.Inorder();
+            foreach (var item in list)
+            {
+                InsertBalanced(item);
+            }
         }
     }
 }
