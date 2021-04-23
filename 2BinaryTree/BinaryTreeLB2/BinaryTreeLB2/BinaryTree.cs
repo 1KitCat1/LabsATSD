@@ -8,7 +8,7 @@ namespace BinaryTreeLB2
     {
         public Node<T> Root { get; private set; }
         public int Count { get; private set; }
-
+        //Binary tree node add. For balanced tree use InsertBalanced
         public void Add(T data)
         {
             var node = new Node<T>(data);
@@ -22,7 +22,36 @@ namespace BinaryTreeLB2
             Count += 1;
             Root.Add(data);
         }
+        //Insert Balanced
+        public void InsertBalanced(T data)
+        {
+            var node = new Node<T>(data);
+            if (Root == null)
+            {
+                Root = node;
+                return;
+            }
+            InsertBalanced(Root, node);
+        }
 
+        public Node<T> InsertBalanced(Node<T> currentNode, Node<T> insertionNode)
+        {
+            if (currentNode == null)
+            {
+                currentNode = insertionNode;
+                return currentNode;
+            }
+            if (insertionNode.CompareTo(currentNode) < 0)
+            {
+                currentNode.Left = InsertBalanced(currentNode.Left, insertionNode);
+            }
+            else if (insertionNode.Data.CompareTo(currentNode.Data) > 0)
+            {
+                currentNode.Right = InsertBalanced(currentNode.Right, insertionNode);
+            }
+            return currentNode;
+        }
+        //Insert Balanced ends
         public int Size()
         {
             return Count;
@@ -34,7 +63,6 @@ namespace BinaryTreeLB2
         //PREORDER
         public List<T> Preorder()
         {
-            var list = new List<T>();
             if (Root == null) return new List<T>();
             return Preorder(Root);
         }
@@ -73,7 +101,6 @@ namespace BinaryTreeLB2
         //POSTORDER
         public List<T> Postorder()
         {
-            var list = new List<T>();
             if (Root == null) return new List<T>();
             return Postorder(Root);
         }
@@ -111,7 +138,6 @@ namespace BinaryTreeLB2
         //INORDER
         public List<T> Inorder()
         {
-            var list = new List<T>();
             if (Root == null) return new List<T>();
             return Inorder(Root);
         }
