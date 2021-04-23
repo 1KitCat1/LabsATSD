@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.Design;
 
 namespace BinaryTreeLB2
 {
@@ -341,6 +340,23 @@ namespace BinaryTreeLB2
                 }
             }
             return current;
+        }
+        public int CountNodeLeft()
+        {
+            return CountNodeLeft(Root);
+        }
+        private int CountNodeLeft(Node<T> current)
+        {
+            if (current == null)
+            {
+                return 0;
+            }
+            if (current.Left == null)
+            {
+                return CountNodeLeft(current.Right);
+            }
+            return CountNodeLeft(current.Left) + CountNodeLeft(current.Right) + 1;
+            
         }
     }
 }
