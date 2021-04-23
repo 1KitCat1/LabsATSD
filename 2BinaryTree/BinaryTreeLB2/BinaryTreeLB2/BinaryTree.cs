@@ -358,5 +358,11 @@ namespace BinaryTreeLB2
             return CountNodeLeft(current.Left) + CountNodeLeft(current.Right) + 1;
             
         }
+
+        public  int SumKeys(Node<int> root)
+        {
+            if (root == null) return 0;
+            return (root.Data + SumKeys(root.Right) + SumKeys(root.Left) );
+        }
     }
 }
