@@ -58,6 +58,11 @@ namespace BinaryTreeLB2
             tree.PrintInorder();
             //Task 10
             Console.WriteLine("Determines if all keys of BBST2 are contained in BBST1");
+            var tree10 = new BinaryTree<int>();
+            tree10.Add(5);
+            tree10.Add(6);
+            tree10.Add(3);
+            Console.WriteLine(tree.ContainsBBST(tree10));
             
         }
     }

@@ -523,6 +523,17 @@ namespace BinaryTreeLB2
                 InsertBalanced(item);
             }
         }
-        
+
+        public bool ContainsBBST(BinaryTree<T> secondTree)
+        {
+            var list = Inorder();
+            var list2 = secondTree.Inorder();
+            for (int i = 0; i < list2.Count; i++)
+            {
+                if (!list.Contains(list2[i])) return false;
+            }
+
+            return true;
+        }
     }
 }
