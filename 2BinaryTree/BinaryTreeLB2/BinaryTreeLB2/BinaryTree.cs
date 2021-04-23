@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 
 namespace BinaryTreeLB2
 {
@@ -29,8 +30,11 @@ namespace BinaryTreeLB2
             if (Root == null)
             {
                 Root = node;
+                Count = 1;
                 return;
             }
+
+            Count++;
             InsertBalanced(Root, node);
         }
 
@@ -169,6 +173,23 @@ namespace BinaryTreeLB2
             foreach (var item in this.Inorder())
             {
                 Console.Write(item.ToString() + " ");
+            }
+            Console.WriteLine();
+        }
+
+        public void PrintSorted()
+        {
+            var list = Inorder();
+            Console.WriteLine("Print in ascending order (inorder): ");
+            foreach (var item in list)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine("Print in descending order: ");
+            for (int i = list.Count - 1; i >= 0; i--)
+            {
+                Console.Write(list[i] + " ");
             }
             Console.WriteLine();
         }
