@@ -46,14 +46,19 @@ namespace BinaryTreeLB2
             var copyTree = tree.CopyBBST();
             copyTree.PrintInorder();
             //Task 9
-            Console.WriteLine("Inserts al keys of BBST2 into a BBST1. Result is BBST1 which is balanced");
+            Console.WriteLine("Inserts all keys of BBST2 into a BBST1. Result is BBST1 which is balanced");
             var tree2 = new BinaryTree<int>();
             tree2.Add(15);
             tree2.Add(4);
             tree2.Add(11);
-            tree2.Add(6);
-            tree.Merge(tree2);
+            tree2.Add(17);
+            tree2.PrintInorder();
+            tree.InsertBBST(tree2);
             tree.PrintInorder();
+            tree.PrintInorder();
+            //Task 10
+            Console.WriteLine("Determines if all keys of BBST2 are contained in BBST1");
+            
         }
     }
 }

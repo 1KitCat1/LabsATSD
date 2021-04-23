@@ -52,9 +52,10 @@ namespace BinaryTreeLB2
         {
             if (currentNode == null)
             {
-                return insertionNode;
+                currentNode = insertionNode;
+                return currentNode;
             }
-            if (insertionNode.CompareTo(currentNode) < 0)
+            if (insertionNode.Data.CompareTo(currentNode.Data) < 0)
             {
                 currentNode.Left = InsertBalanced(currentNode.Left, insertionNode);
                 currentNode = BalanceTree(currentNode);
@@ -514,7 +515,7 @@ namespace BinaryTreeLB2
             return temp;
         }
 
-        public void Merge(BinaryTree<T> secondTree)
+        public void InsertBBST(BinaryTree<T> secondTree)
         {
             var list = secondTree.Inorder();
             foreach (var item in list)
@@ -522,5 +523,6 @@ namespace BinaryTreeLB2
                 InsertBalanced(item);
             }
         }
+        
     }
 }
