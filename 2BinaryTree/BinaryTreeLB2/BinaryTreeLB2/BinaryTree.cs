@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 
 namespace BinaryTreeLB2
@@ -9,6 +8,17 @@ namespace BinaryTreeLB2
     {
         public Node<T> Root { get; private set; }
         public int Count { get; private set; }
+
+        public BinaryTree(Node<T> root)
+        {
+            Root = root;
+            Count = 1;
+        }
+        public BinaryTree()
+        {
+            Root = null;
+            Count = 0;
+        }
         //Binary tree node add. For balanced tree use InsertBalanced
         public void Add(T data)
         {
@@ -473,19 +483,40 @@ namespace BinaryTreeLB2
             return list[list.Count - 2];
         }
 
+        // public BinaryTree<T> CopyBBST()
+        // {
+        //     var newTree = new BinaryTree<T>();
+        //     newTree.Root = new Node<T>(Root.Data);
+        //     var list = Inorder();
+        //     while (list.Count > 0)
+        //     {
+        //         int ind = list.Count / 2;
+        //         newTree.Add(list[ind]);
+        //         list.RemoveAt(ind);
+        //     }
+        //
+        //     return newTree;
+        // }
         public BinaryTree<T> CopyBBST()
         {
-            var newTree = new BinaryTree<T>();
-            newTree.Root = new Node<T>(Root.Data);
-            var list = Inorder();
-            while (list.Count > 0)
+            BinaryTree<T> tree = new BinaryTree<T>(this.CopyTree(Root));
+            return tree;
+        }
+        private Node<T> CopyTree(Node<T> root)
+        {
+            if (root == null)
             {
-                int ind = list.Count / 2;
-                newTree.Add(list[ind]);
-                list.RemoveAt(ind);
+                return null;
             }
+            var temp = new Node<T>(root.Data);
+            temp.Left = CopyTree(root.Left);
+            temp.Right = CopyTree(root.Right);
+            return temp;
+        }
 
-            return newTree;
+        public void Merge(BinaryTree<T> secondTree)
+        {
+            
         }
     }
 }
