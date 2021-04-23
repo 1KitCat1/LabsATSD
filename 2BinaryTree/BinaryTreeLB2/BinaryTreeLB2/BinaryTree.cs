@@ -272,6 +272,21 @@ namespace BinaryTreeLB2
             }
             return current;
         }
+
+        public BinaryTree<T> BalanceTreeBackup()
+        {
+            var list = Inorder();
+            var tree = new BinaryTree<T>();
+            while (list.Count > 0)
+            {
+                int ind = Count / 2;
+                tree.Add(list[ind]);
+                list.RemoveAt(ind);
+            }
+
+            return tree;
+        }
+
         //
         //DeleteNode
         public void Remove(T data)
@@ -455,17 +470,19 @@ namespace BinaryTreeLB2
         {
             var list = Inorder();
             if (list.Count < 2) return default(T);
-            return list[1];
+            return list[list.Count - 2];
         }
 
         public BinaryTree<T> CopyBBST()
         {
             var newTree = new BinaryTree<T>();
             newTree.Root = new Node<T>(Root.Data);
-            var list = Preorder();
-            foreach (var item in list)
+            var list = Inorder();
+            while (list.Count > 0)
             {
-                newTree.InsertBalanced(item);
+                int ind = list.Count / 2;
+                newTree.Add(list[ind]);
+                list.RemoveAt(ind);
             }
 
             return newTree;

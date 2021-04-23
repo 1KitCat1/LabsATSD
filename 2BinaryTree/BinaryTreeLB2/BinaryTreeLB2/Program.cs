@@ -42,8 +42,10 @@ namespace BinaryTreeLB2
             Console.WriteLine("Returns the second largest key: ");
             Console.WriteLine(tree.FindSecondLargest());
             //Task 8
-            Console.WriteLine("Returns the second largest key: ");
-        
+            Console.WriteLine("Returns the copy of a binary tree: ");
+            var copyTree = tree.CopyBBST();
+            copyTree.PrintInorder();
+            //Task 9
         }
     }
 }
