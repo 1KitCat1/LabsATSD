@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Data;
 
 namespace Lab3Heap
@@ -11,7 +12,7 @@ namespace Lab3Heap
 
         public Heap(int length)
         {
-            this.length = length;
+            this.length = 0;
             array = new int[length];
         }
 
@@ -83,7 +84,33 @@ namespace Lab3Heap
         }
         public void Heapify()
         {
-            RecursiveHeapify(length-1);
+            RecursiveHeapify(length - 1);
+        }
+        
+        public void SiftUp(int item)
+        {
+            if (IsFull())
+            {
+                Console.WriteLine("Array is full");
+                return;
+            }
+
+            int position = length;
+            array[length++] = item;
+            
+            while (position > 0)
+            {
+                int parent = position / 2;
+                if (array[position] < array[parent])
+                {
+                    int temp = array[position];
+                    array[position] = array[parent];
+                    array[parent] = temp;
+                }
+                else break;
+
+                position = parent;
+            }
         }
     }
 }
