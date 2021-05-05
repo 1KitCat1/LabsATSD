@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Versioning;
 
 namespace Lab3Heap
 {
@@ -6,6 +7,7 @@ namespace Lab3Heap
     {
         private int length;
         private int[] array;
+        
 
         public Heap(int length)
         {
@@ -37,5 +39,12 @@ namespace Lab3Heap
         {
             return length == array.Length;
         }
+
+        public int Size()
+        {
+            return length;
+        }
+
+        
     }
 }
