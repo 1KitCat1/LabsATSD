@@ -18,5 +18,14 @@ namespace Lab3Heap
             array = elements;
             length = elements.Length;
         }
+
+        public void Print()
+        {
+            for (int i = 0; i < length; i++)
+            {
+                Console.Write(array[i] + " ");
+            }
+            Console.WriteLine();
+        }
     }
 }
