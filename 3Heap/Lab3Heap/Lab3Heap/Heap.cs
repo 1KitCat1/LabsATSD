@@ -2,16 +2,21 @@
 
 namespace Lab3Heap
 {
-    public class Heap<T>
-        where T : IComparable
+    public class Heap
     {
         private int length;
-        private T[] array;
+        private int[] array;
 
         public Heap(int length)
         {
             this.length = length;
-            array = new T[length];
+            array = new int[length];
+        }
+
+        public Heap(params int[] elements)
+        {
+            array = elements;
+            length = elements.Length;
         }
     }
 }
