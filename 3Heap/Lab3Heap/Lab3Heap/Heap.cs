@@ -27,5 +27,10 @@ namespace Lab3Heap
             }
             Console.WriteLine();
         }
+
+        public bool IsEmpty()
+        {
+            return length == 0;
+        }
     }
 }
