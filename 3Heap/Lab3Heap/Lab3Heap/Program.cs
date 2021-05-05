@@ -12,6 +12,12 @@ namespace Lab3Heap {
             heap.SiftUp(9);
 
             heap.Print();
+            heap.SiftDown();
+            heap.Print();
+            heap.SiftDown();
+            heap.SiftDown();
+            heap.Print();
+            
         }
     }
 }

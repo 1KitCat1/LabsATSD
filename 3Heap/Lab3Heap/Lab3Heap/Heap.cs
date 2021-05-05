@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Data;
+using System.Runtime.CompilerServices;
 
 namespace Lab3Heap
 {
@@ -48,12 +49,13 @@ namespace Lab3Heap
 
         public int RightChildren(int parent)
         {
-            if(parent * 2 + 1 < length) return parent * 2 + 1;
+            if(parent * 2 + 2 < length) return parent * 2 + 2;
             return -1;
         }
         public int LeftChildren(int parent)
         {
-            if(parent * 2 < length) return parent * 2;
+            
+            if(parent * 2 + 1 < length) return parent * 2 + 1;
             return -1;
         }
 
@@ -110,6 +112,44 @@ namespace Lab3Heap
                 else break;
 
                 position = parent;
+            }
+        }
+
+        public void SiftDown()
+        {
+            if (IsEmpty())
+            {
+                Console.WriteLine("Heap is empty");
+                return;
+            }
+
+            array[0] = array[--length];
+            SiftDown(0);
+        }
+
+        private void SiftDown(int position)
+        {
+            if (LeftChildren(position) == -1 && RightChildren(position) == -1)
+            {
+                return;
+            }
+
+            if (RightChildren(position) == -1 || array[RightChildren(position)] > array[LeftChildren(position)])
+            {
+                if (array[LeftChildren(position)] < array[position])
+                {
+                    var temp = array[position];
+                    array[position] = array[LeftChildren(position)];
+                    array[LeftChildren(position)] = temp;
+                    SiftDown(LeftChildren(position));
+                }
+            }
+            else if(array[RightChildren(position)] < array[position])
+            {
+                var temp = array[position];
+                array[position] = array[LeftChildren(position)];
+                array[LeftChildren(position)] = temp;
+                SiftDown(LeftChildren(position));
             }
         }
     }
