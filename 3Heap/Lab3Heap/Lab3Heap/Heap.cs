@@ -22,7 +22,7 @@ namespace Lab3Heap
             array = elements;
             length = elements.Length;
         }
-
+        
         public void Print()
         {
             for (int i = 0; i < length; i++)
@@ -151,6 +151,13 @@ namespace Lab3Heap
                 array[LeftChildren(position)] = temp;
                 SiftDown(LeftChildren(position));
             }
+        }
+
+        public int DeleteTop()
+        {
+            int rez = array[0];
+            SiftDown();
+            return rez;
         }
         
     }
