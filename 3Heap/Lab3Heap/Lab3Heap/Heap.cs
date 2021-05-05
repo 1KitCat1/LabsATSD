@@ -48,6 +48,10 @@ namespace Lab3Heap
         {
             return parent * 2 + 1;
         }
+        public int LeftChildren(int parent)
+        {
+            return parent * 2;
+        }
         public void Heapify()
         {
             for (int i = length - 1; i > 0; i++)
