@@ -152,5 +152,6 @@ namespace Lab3Heap
                 SiftDown(LeftChildren(position));
             }
         }
+        
     }
 }

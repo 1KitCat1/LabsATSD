@@ -1,6 +1,7 @@
 ﻿using System;
 
 namespace Lab3Heap {
+    
     class Program {
         static void Main(string[] args)
         {
@@ -15,6 +16,7 @@ namespace Lab3Heap {
             heap.SiftDown();
             heap.Print();
             heap.SiftDown();
+            heap.Print();
             heap.SiftDown();
             heap.Print();
             
