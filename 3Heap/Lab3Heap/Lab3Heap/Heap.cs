@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.Versioning;
 
 namespace Lab3Heap
 {
@@ -45,6 +44,16 @@ namespace Lab3Heap
             return length;
         }
 
-        
+        public int RightChildren(int parent)
+        {
+            return parent * 2 + 1;
+        }
+        public void Heapify()
+        {
+            for (int i = length - 1; i > 0; i++)
+            {
+                
+            }
+        }
     }
 }
