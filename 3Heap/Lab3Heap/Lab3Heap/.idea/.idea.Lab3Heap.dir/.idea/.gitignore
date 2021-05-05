@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+/.idea.Lab3Heap.iml
+# Datasource local storage ignored files
+/../../../../../../../../../../../../../../../../:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\3Heap\Lab3Heap\Lab3Heap\.idea\.idea.Lab3Heap.dir\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

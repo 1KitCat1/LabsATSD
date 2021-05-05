@@ -1,0 +1,16 @@
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\3Heap\Lab3Heap\Lab3Heap\bin\Debug\net5.0\Lab3Heap.exe
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\3Heap\Lab3Heap\Lab3Heap\bin\Debug\net5.0\Lab3Heap.deps.json
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\3Heap\Lab3Heap\Lab3Heap\bin\Debug\net5.0\Lab3Heap.runtimeconfig.json
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\3Heap\Lab3Heap\Lab3Heap\bin\Debug\net5.0\Lab3Heap.runtimeconfig.dev.json
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\3Heap\Lab3Heap\Lab3Heap\bin\Debug\net5.0\Lab3Heap.dll
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\3Heap\Lab3Heap\Lab3Heap\bin\Debug\net5.0\ref\Lab3Heap.dll
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\3Heap\Lab3Heap\Lab3Heap\bin\Debug\net5.0\Lab3Heap.pdb
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\3Heap\Lab3Heap\Lab3Heap\obj\Debug\net5.0\Lab3Heap.csprojAssemblyReference.cache
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\3Heap\Lab3Heap\Lab3Heap\obj\Debug\net5.0\Lab3Heap.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\3Heap\Lab3Heap\Lab3Heap\obj\Debug\net5.0\Lab3Heap.AssemblyInfoInputs.cache
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\3Heap\Lab3Heap\Lab3Heap\obj\Debug\net5.0\Lab3Heap.AssemblyInfo.cs
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\3Heap\Lab3Heap\Lab3Heap\obj\Debug\net5.0\Lab3Heap.csproj.CoreCompileInputs.cache
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\3Heap\Lab3Heap\Lab3Heap\obj\Debug\net5.0\Lab3Heap.dll
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\3Heap\Lab3Heap\Lab3Heap\obj\Debug\net5.0\ref\Lab3Heap.dll
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\3Heap\Lab3Heap\Lab3Heap\obj\Debug\net5.0\Lab3Heap.pdb
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\3Heap\Lab3Heap\Lab3Heap\obj\Debug\net5.0\Lab3Heap.genruntimeconfig.cache
