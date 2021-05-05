@@ -147,9 +147,9 @@ namespace Lab3Heap
             else if(array[RightChildren(position)] < array[position])
             {
                 var temp = array[position];
-                array[position] = array[LeftChildren(position)];
-                array[LeftChildren(position)] = temp;
-                SiftDown(LeftChildren(position));
+                array[position] = array[RightChildren(position)];
+                array[RightChildren(position)] = temp;
+                SiftDown(RightChildren(position));
             }
         }
 
