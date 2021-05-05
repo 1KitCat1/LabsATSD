@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 
 namespace Lab3Heap
 {
@@ -46,18 +47,43 @@ namespace Lab3Heap
 
         public int RightChildren(int parent)
         {
-            return parent * 2 + 1;
+            if(parent * 2 + 1 < length) return parent * 2 + 1;
+            return -1;
         }
         public int LeftChildren(int parent)
         {
-            return parent * 2;
+            if(parent * 2 < length) return parent * 2;
+            return -1;
+        }
+
+        private void RecursiveHeapify(int parent)
+        {
+            if (parent < 0) return;
+            if (LeftChildren(parent) != -1)
+            {
+                if (array[LeftChildren(parent)] < array[parent])
+                {
+                    int temp = array[parent];
+                    array[parent] = array[LeftChildren(parent)];
+                    array[LeftChildren(parent)] = temp;
+                    RecursiveHeapify(LeftChildren(parent));
+                }
+            }
+            if (RightChildren(parent) != -1)
+            {
+                if (array[RightChildren(parent)] < array[parent])
+                {
+                    int temp = array[parent];
+                    array[parent] = array[RightChildren(parent)];
+                    array[RightChildren(parent)] = temp;
+                    RecursiveHeapify(RightChildren(parent));
+                }
+            }
+            RecursiveHeapify(parent - 1);
         }
         public void Heapify()
         {
-            for (int i = length - 1; i > 0; i++)
-            {
-                
-            }
+            RecursiveHeapify(length-1);
         }
     }
 }
