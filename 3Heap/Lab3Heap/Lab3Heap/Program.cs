@@ -11,6 +11,15 @@ namespace Lab3Heap {
                 array[i] = heap.DeleteTop();
             }
         }
+        public static void HeapSort2(int[] array)
+        {
+            var heap = new Heap(array);
+            heap.Heapify();
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[array.Length - i - 1] = heap.DeleteTop();
+            }
+        }
         static void Main(string[] args)
         {
             var heap = new Heap(10);
@@ -29,8 +38,14 @@ namespace Lab3Heap {
             heap.Print();
             heap.SiftDown();
             heap.Print();
-            int[] array = new int[10] {3, 4, 2, 1, 5, 6, 7, 8, 9, 10};
+            int[] array = new int[10] {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
             HeapSort(array);
+            foreach (var el in array)
+            {
+                Console.Write(el + " ");
+            }
+            Console.WriteLine();
+            HeapSort2(array);
             foreach (var el in array)
             {
                 Console.Write(el + " ");
