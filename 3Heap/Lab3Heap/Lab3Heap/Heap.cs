@@ -32,5 +32,10 @@ namespace Lab3Heap
         {
             return length == 0;
         }
+
+        public bool IsFull()
+        {
+            return length == array.Length;
+        }
     }
 }
