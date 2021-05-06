@@ -1,0 +1,6 @@
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\4Graph\Lab4Graph\Lab4Graph\bin\Debug\Lab4Graph.exe
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\4Graph\Lab4Graph\Lab4Graph\bin\Debug\Lab4Graph.pdb
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\4Graph\Lab4Graph\Lab4Graph\obj\Debug\Lab4Graph.csprojAssemblyReference.cache
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\4Graph\Lab4Graph\Lab4Graph\obj\Debug\Lab4Graph.csproj.CoreCompileInputs.cache
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\4Graph\Lab4Graph\Lab4Graph\obj\Debug\Lab4Graph.exe
+C:\Users\DenCHik\OneDrive\Desktop\1st20-21\2sem\ATSD\Labs\Lab1\4Graph\Lab4Graph\Lab4Graph\obj\Debug\Lab4Graph.pdb

@@ -4,7 +4,7 @@
     {
         public static void Main(string[] args)
         {
-            
+            var graph = new Graph(5, 5);
         }
     }
 }
