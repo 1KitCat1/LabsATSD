@@ -63,10 +63,16 @@ namespace Lab4Graph
                 var edge = new Edge(ver1, ver2, weight);
                 EdgeArray[entered++] = edge;
             }
-            SortEdges();
+            //SortEdges();
 
         }
-
+        public void PrintGraph()
+        {
+            foreach(var el in EdgeArray)
+            {
+                Console.WriteLine("V1: " + el.Vertex1 + " V2: " + el.Vertex2 + " Weight: " + el.Weight);
+            }
+        }
         private void SortEdges()
         {
             for (int i = 0; i < AmountEdges - 1; i++)
@@ -77,31 +83,45 @@ namespace Lab4Graph
                     {
                         var temp = EdgeArray[j];
                         EdgeArray[j] = EdgeArray[j + 1];
-                        EdgeArray[j + 1] = EdgeArray[j];
+                        EdgeArray[j + 1] = temp;
                     }
                 }    
             }
-
-        }
-
-        public void PrintGraph()
-        {
-            foreach(var el in EdgeArray)
-            {
-                Console.WriteLine("V1: " + el.Vertex1 + " V2: " + el.Vertex2 + " Weight: " + el.Weight);
-            }
+        
         }
         public Graph(int amountEdges, int amountVert, Edge[] edges)
         {
             AmountEdges = amountEdges;
             AmountVert = amountVert;
             EdgeArray = edges;
-            SortEdges();
+            //SortEdges();
         }
         
-        public int Kruskals()
+        public Graph Kruskals()
         {
+            SortEdges();
+            int[] treeIndex = new int[AmountVert];
+            for (int i = 0; i < AmountVert; i++) treeIndex[i] = i;
             
+
+            Edge[] result = new Edge[AmountVert - 1];
+            int amountEdgesResult = 0;
+            for (int i = 0; i < AmountEdges && amountEdgesResult < AmountVert - 1; i++)
+            {
+                //Console.WriteLine(EdgeArray[i].Vertex1 + " "+ EdgeArray[i].Vertex2);
+                if (treeIndex[EdgeArray[i].Vertex1] != treeIndex[EdgeArray[i].Vertex2])
+                {
+                    result[amountEdgesResult++] = EdgeArray[i];
+                    int tempTreeInd = treeIndex[EdgeArray[i].Vertex2];
+                    for (int j = 0; j < AmountVert; j++)
+                    {
+                        if (treeIndex[j] == tempTreeInd) treeIndex[j] = treeIndex[EdgeArray[i].Vertex1];
+                    }
+                }
+            }
+
+            var resGraph = new Graph(AmountVert - 1, AmountVert, result);
+            return resGraph;
         }
     }
 }
