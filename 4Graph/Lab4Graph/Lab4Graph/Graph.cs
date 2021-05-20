@@ -63,14 +63,37 @@ namespace Lab4Graph
                 var edge = new Edge(ver1, ver2, weight);
                 EdgeArray[entered++] = edge;
             }
+            SortEdges();
 
         }
 
+        private void SortEdges()
+        {
+            for (int i = 0; i < AmountEdges - 1; i++)
+            {
+                for (int j = 0; j < AmountEdges - 1 ; j++)
+                {
+                    if (EdgeArray[j].Weight > EdgeArray[j + 1].Weight)
+                    {
+                        var temp = EdgeArray[j];
+                        EdgeArray[j] = EdgeArray[j + 1];
+                        EdgeArray[j + 1] = EdgeArray[j];
+                    }
+                }    
+            }
+
+        }
         public Graph(int amountEdges, int amountVert, Edge[] edges)
         {
             AmountEdges = amountEdges;
             AmountVert = amountVert;
             EdgeArray = edges;
+            SortEdges();
+        }
+
+        public int Kruskals()
+        {
+            
         }
     }
 }
