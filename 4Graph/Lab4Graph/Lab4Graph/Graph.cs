@@ -66,5 +66,11 @@ namespace Lab4Graph
 
         }
 
+        public Graph(int amountEdges, int amountVert, Edge[] edges)
+        {
+            AmountEdges = amountEdges;
+            AmountVert = amountVert;
+            EdgeArray = edges;
+        }
     }
 }
