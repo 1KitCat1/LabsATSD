@@ -124,24 +124,22 @@ namespace Lab4Graph
 
         public List<int> Dijkstra(int startVertex)
         {
-            var vertexList = new List<int>[AmountVert];
-            var result = new List<int>(AmountVert);
+            var adjMatrix = new List<int>[AmountVert];
+            for (int i = 0; i < AmountVert; i++) adjMatrix[i] = new List<int>();
+            int inf = 9999;
             for (int i = 0; i < AmountVert; i++)
             {
-                vertexList[i] = new List<int>();
-                if (i != startVertex) result[i] = 99999;
-                else result[i] = 0;
-            }
-                
-            
-            for (int i = 0; i < EdgeArray.Length; i++)
-            {
-                vertexList[EdgeArray[i].Vertex1].Add(EdgeArray[i].Vertex2);
-                vertexList[EdgeArray[i].Vertex2].Add(EdgeArray[i].Vertex1);
+                var tempList = new List<int>(AmountVert);
+                for (int j = 0; j < AmountVert; j++)
+                {
+                    tempList[i] = inf;
+                }
+
+                adjMatrix[i] = tempList;
             }
 
-            
-            return vertexList[0];
+            var result = new List<int>();
+            return result;
         }
     }
 }
