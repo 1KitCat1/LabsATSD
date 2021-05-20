@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
 namespace Lab4Graph
@@ -103,7 +104,6 @@ namespace Lab4Graph
             int[] treeIndex = new int[AmountVert];
             for (int i = 0; i < AmountVert; i++) treeIndex[i] = i;
             
-
             Edge[] result = new Edge[AmountVert - 1];
             int amountEdgesResult = 0;
             for (int i = 0; i < AmountEdges && amountEdgesResult < AmountVert - 1; i++)
@@ -119,9 +119,29 @@ namespace Lab4Graph
                     }
                 }
             }
+            return new Graph(AmountVert - 1, AmountVert, result);
+        }
 
-            var resGraph = new Graph(AmountVert - 1, AmountVert, result);
-            return resGraph;
+        public List<int> Dijkstra(int startVertex)
+        {
+            var vertexList = new List<int>[AmountVert];
+            var result = new List<int>(AmountVert);
+            for (int i = 0; i < AmountVert; i++)
+            {
+                vertexList[i] = new List<int>();
+                if (i != startVertex) result[i] = 99999;
+                else result[i] = 0;
+            }
+                
+            
+            for (int i = 0; i < EdgeArray.Length; i++)
+            {
+                vertexList[EdgeArray[i].Vertex1].Add(EdgeArray[i].Vertex2);
+                vertexList[EdgeArray[i].Vertex2].Add(EdgeArray[i].Vertex1);
+            }
+
+            
+            return vertexList[0];
         }
     }
 }

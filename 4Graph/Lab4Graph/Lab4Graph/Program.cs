@@ -20,6 +20,7 @@
             var graph = new Graph(ed, vert, edges);
             var kruskal = graph.Kruskals();
             kruskal.PrintGraph();
+            graph.Dijkstra(0);
             //graph.PrintGraph();
         }
     }
