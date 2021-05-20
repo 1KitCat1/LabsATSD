@@ -83,6 +83,14 @@ namespace Lab4Graph
             }
 
         }
+
+        public void PrintGraph()
+        {
+            foreach(var el in EdgeArray)
+            {
+                Console.WriteLine("V1: " + el.Vertex1 + " V2: " + el.Vertex2 + " Weight: " + el.Weight);
+            }
+        }
         public Graph(int amountEdges, int amountVert, Edge[] edges)
         {
             AmountEdges = amountEdges;
@@ -90,7 +98,7 @@ namespace Lab4Graph
             EdgeArray = edges;
             SortEdges();
         }
-
+        
         public int Kruskals()
         {
             
