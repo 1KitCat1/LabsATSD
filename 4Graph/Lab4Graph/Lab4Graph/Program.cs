@@ -1,4 +1,6 @@
-﻿namespace Lab4Graph
+﻿using System;
+
+namespace Lab4Graph
 {
     public class Program
     {
@@ -21,6 +23,13 @@
             var kruskal = graph.Kruskals();
             kruskal.PrintGraph();
             graph.Dijkstra(0);
+            var dij = graph.DijkstraWithNextHop(0);
+            var nextHope = dij[1];
+            var dijkstraVal = dij[0];
+            for (int i = 0; i < graph.AmountVert; i++)
+            {
+                Console.WriteLine(dijkstraVal[i] + " " + nextHope[i]);
+            }
             //graph.PrintGraph();
         }
     }

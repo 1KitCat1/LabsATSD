@@ -125,21 +125,134 @@ namespace Lab4Graph
         public List<int> Dijkstra(int startVertex)
         {
             var adjMatrix = new List<int>[AmountVert];
-            for (int i = 0; i < AmountVert; i++) adjMatrix[i] = new List<int>();
+            //for (int i = 0; i < AmountVert; i++) adjMatrix[i] = new List<int>();
             int inf = 9999;
+            var result = new List<int>();
             for (int i = 0; i < AmountVert; i++)
             {
-                var tempList = new List<int>(AmountVert);
+                result.Add(inf);
+                var tempList = new List<int>();
                 for (int j = 0; j < AmountVert; j++)
                 {
-                    tempList[i] = inf;
+                    tempList.Add(inf);
                 }
 
                 adjMatrix[i] = tempList;
             }
 
-            var result = new List<int>();
+            result[startVertex] = 0;
+            
+            for (int i = 0; i < AmountEdges; i++)
+            {
+                adjMatrix[EdgeArray[i].Vertex1][EdgeArray[i].Vertex2] 
+                    = adjMatrix[EdgeArray[i].Vertex2][EdgeArray[i].Vertex1]
+                        = EdgeArray[i].Weight;
+            }
+
+            var closed = new bool[AmountVert];
+            closed[startVertex] = true;
+            int currentPosition = startVertex;
+            int nextPosition = 0;
+            if (currentPosition == 0) nextPosition = 1;
+            for (int i = 0; i < AmountVert; i++)
+            {
+                for(int j = 0; j < AmountVert; j++)
+                    if (!closed[j])
+                    {
+                        nextPosition = j;
+                        break;
+                    }
+                for (int j = 0; j < AmountVert; j++)
+                {
+                    if (adjMatrix[currentPosition][j] + result[currentPosition] < result[j])
+                    {
+                        result[j] = adjMatrix[currentPosition][j] + result[currentPosition];
+                        if (result[j] < result[nextPosition] && !closed[j]) nextPosition = j;
+                    }
+                    
+                }
+                
+                currentPosition = nextPosition;
+                closed[nextPosition] = true;
+            }
+
+            /*for (int i = 0; i < AmountVert; i++)
+            {
+                for (int j = 0; j < AmountVert; j++)
+                {
+                    Console.Write(adjMatrix[i][j] + " ");
+                }
+
+                Console.WriteLine();
+            }*/
             return result;
+        }
+        public List<List<int>> DijkstraWithNextHop(int startVertex)
+        {
+            var adjMatrix = new List<int>[AmountVert];
+            //for (int i = 0; i < AmountVert; i++) adjMatrix[i] = new List<int>();
+            int inf = 9999;
+            var result = new List<int>();
+            for (int i = 0; i < AmountVert; i++)
+            {
+                result.Add(inf);
+                var tempList = new List<int>();
+                for (int j = 0; j < AmountVert; j++)
+                {
+                    tempList.Add(inf);
+                }
+
+                adjMatrix[i] = tempList;
+            }
+
+            result[startVertex] = 0;
+            
+            for (int i = 0; i < AmountEdges; i++)
+            {
+                adjMatrix[EdgeArray[i].Vertex1][EdgeArray[i].Vertex2] 
+                    = adjMatrix[EdgeArray[i].Vertex2][EdgeArray[i].Vertex1]
+                        = EdgeArray[i].Weight;
+            }
+
+            var nextHop = new List<int>();
+            for (int i = 0; i < AmountVert; i++)
+            {
+                if(adjMatrix[startVertex][i] != inf) nextHop.Add(i);
+                else nextHop.Add(-1);
+            }
+            
+            var closed = new bool[AmountVert];
+            closed[startVertex] = true;
+            int currentPosition = startVertex;
+            int nextPosition = 0;
+            if (currentPosition == 0) nextPosition = 1;
+            for (int i = 0; i < AmountVert; i++)
+            {
+                for(int j = 0; j < AmountVert; j++)
+                    if (!closed[j])
+                    {
+                        nextPosition = j;
+                        break;
+                    }
+                for (int j = 0; j < AmountVert; j++)
+                {
+                    if (adjMatrix[currentPosition][j] + result[currentPosition] < result[j])
+                    {
+                        result[j] = adjMatrix[currentPosition][j] + result[currentPosition];
+                        if (currentPosition != startVertex) nextHop[j] = nextHop[currentPosition]; 
+                        if (result[j] < result[nextPosition] && !closed[j]) nextPosition = j;
+                    }
+                    
+                }
+                
+                currentPosition = nextPosition;
+                closed[nextPosition] = true;
+            }
+
+            var answ = new List<List<int>>();
+            answ.Add(result);
+            answ.Add(nextHop);
+            return answ;
         }
     }
 }
